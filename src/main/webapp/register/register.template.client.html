@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
 
-    <title>Course Management - Login</title>
+    <title>Course Management - Register</title>
 </head>
 
 <body>
@@ -13,54 +13,60 @@
         <div class="row">
             <div class="col-md-7 offset-md-2 mt-5">
                 <div class="text-center">
-                    <img src="../images/reading-cat.jpg">
+                    <img src="../images/cartoon-cat.jpg">
                 </div>
+                <h1 class="text-center">User Registration</h1>
 
-                <h1 class="text-center">Course Manager</h1>
-                <form class="login-form">
+                <form class="signup-form">
                     <div class="form-group row">
-                        <label for="username" class="col-sm-2 col-form-label">
+                        <label for="usernameReg" class="col-sm-2 col-form-label">
                             Username
                         </label>
                         <div class="col-sm-10">
-                            <input class="form-control wbdv-field wbdv-username" id="username"
+                            <input class="form-control wbdv-field wbdv-username" id="usernameReg"
                                 placeholder="Enter Username">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="password" class="col-sm-2 col-form-label">
+                        <label for="passwordReg" class="col-sm-2 col-form-label">
                             Password
                         </label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control wbdv-field wbdv-password" id="password"
+                            <input type="password" class="form-control wbdv-field wbdv-password" id="passwordReg"
                                 placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="verifyPasswordReg" class="col-sm-2 col-form-label">
+                            Verify Password
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control wbdv-field wbdv-password-verify"
+                                id="verifyPasswordReg" placeholder="Re-Enter Password">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-10">
-                            <div class="row mb-3">
-                                <div class="col-8">
+                            <div class="row mb-2">
+                                <div class="col-sm-8 mb-md-0 mb-3">
                                     <a href="../profile/profile.template.client.html"
-                                        class="btn btn-success btn-block wbdv-button wbdv-login">Log in</a>
+                                        class="btn btn-success btn-block wbdv-button wbdv-register">
+                                        Register
+                                    </a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-sm-4">
                                     <a href="../course-list/course-list.template.client.html"
                                         class="btn btn-info btn-block">
                                         Cancel
                                     </a>
                                 </div>
                             </div>
-                            <div class="row login-misc-links">
+                            <div class="row signup-misc-links">
                                 <div class="col-6">
-                                    <a href="#" class="wbdv-link wbdv-forgot-password">
-                                        Forgot Password?
-                                    </a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="../register/register.template.client.html"
-                                        class="float-right wbdv-link wbdv-register">
-                                        Register
+                                    <a href="../login/login.template.client.html"
+                                        class="float-left wbdv-link wbdv-login">
+                                        Back to Log In
                                     </a>
                                 </div>
                             </div>
@@ -69,6 +75,7 @@
                 </form>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
