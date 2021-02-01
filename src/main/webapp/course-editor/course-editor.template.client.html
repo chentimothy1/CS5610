@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="course-list.style.client.css" rel="stylesheet" />
+    <link href="course-editor.style.client.css" rel="stylesheet" />
+
+    <title>Course Management - Course Editor</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <span class="navbar-brand mx-auto mr-md-5 wbdv-course-title">
+            <a href="../course-list/course-list.template.client.html" class="mr-2 mt-1">
+                <i class="fas fa-times close-editor wbdv-course-editor wbdv-close"></i>
+            </a>
+            CS 5610 - Web Development
+        </span>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav course-editor-nav wbdv-lesson-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Build</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Pages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Theme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-plus wbdv-lesson-add-btn"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid widget-container">
+        <div class="row">
+            <div class="col-md-3 module-list text-center wbdv-module-list">
+                <ul class="nav flex-column nav-pills module-list-pill">
+                    <a class="nav-link mr-2 mb-3 active wbdv-module-item" href="#">
+                        Module 1: jQuery
+                        <i class="fas fa-times float-right mt-1 ml-1 wbdv-module-item-delete-btn"></i>
+                    </a>
+                    <a class="nav-link mr-2 mb-3 wbdv-module-item" href="#">
+                        Module 2: React
+                        <i class="fas fa-times float-right mt-1 ml-1 wbdv-module-item-delete-btn"></i>
+                    </a>
+                    <a class="nav-link mr-2 mb-3 wbdv-module-item" href="#">
+                        Module 3: Redux
+                        <i class="fas fa-times float-right mt-1 ml-1 wbdv-module-item-delete-btn"></i>
+                    </a>
+                    <a class="nav-link mr-2 mb-3 wbdv-module-item" href="#">
+                        Module 4: Native
+                        <i class="fas fa-times float-right mt-1 ml-1 wbdv-module-item-delete-btn"></i>
+                    </a>
+                    <a class="nav-link mr-2 mb-3 wbdv-module-item" href="#">
+                        Module 5: Angular
+                        <i class="fas fa-times float-right mt-1 ml-1 wbdv-module-item-delete-btn"></i>
+                    </a>
+                    <a class="nav-link mr-2 mb-3 wbdv-module-item" href="#">
+                        Module 6: NodeJS
+                        <i class="fas fa-times float-right mt-1 ml-1 wbdv-module-item-delete-btn"></i>
+                    </a>
+                    <a class="nav-link mr-2 mb-3 wbdv-module-item" href="#">
+                        Module 7: MongoDB
+                        <i class="fas fa-times float-right mt-1 ml-1 wbdv-module-item-delete-btn"></i>
+                    </a>
+                    <a class="nav-link mr-2">
+                        <div class="row">
+                            <div class="col-9 col-md-10 wbdv-module-item-title">
+                                <input class="form-control" type="text" placeholder="New Module Name">
+                            </div>
+                            <div class="col-3 col-md-2">
+                                <button class="btn btn-success wbdv-module-item-add-btn" style="float:right"
+                                    type="submit">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="col-md-9 topic-list">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="nav nav-pills topic-pill-list wbdv-topic-pill-list">
+                            <li class="nav-item mr-2 mb-2">
+                                <a class="nav-link wbdv-topic-pill" href="#">Topic 1</a>
+                            </li>
+                            <li class="nav-item mr-2 mb-2">
+                                <a class="nav-link active wbdv-topic-pill" href="#">Topic 2</a>
+                            </li>
+                            <li class="nav-item mr-2 mb-2">
+                                <a class="nav-link wbdv-topic-pill" href="#">Topic 3</a>
+                            </li>
+                            <li class="nav-item mr-2 mb-2">
+                                <a class="nav-link wbdv-topic-pill" href="#">Topic 4</a>
+                            </li>
+                            <li class="nav-item mr-2 mb-2">
+                                <a class="nav-link wbdv-topic-add-btn" href="#"><i class="fas fa-plus"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button class="btn btn-info mr-3">Save</button>
+                        <label for="previewBtn">Preview</label>
+                        <input id="previewBtn" checked data-toggle="toggle" data-onstyle="success"
+                            data-offstyle="danger" type="checkbox">
+                    </div>
+
+                    <!--widget: heading-->
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div class="row heading-widget">
+                            <div class="col-md-5 col-12">
+                                <span class="widget-name">
+                                    Heading Widget
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-5 text-md-right">
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-up"></i>
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-5">
+                                <select class="form-control" id="widgetType">
+                                    <option disabled>Widget Type</option>
+                                    <option selected>Heading</option>
+                                    <option>Text</option>
+                                    <option>List</option>
+                                    <option>Image</option>
+                                    <option>Link</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="form-group row">
+                                    <label for="headingText" class="col-sm-12 col-form-label">
+                                        Heading Text
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="headingText"
+                                            placeholder="Heading text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="headingSize" class="col-sm-12 col-form-label">
+                                        Heading Size
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <select class="form-control" id="headingSize">
+                                            <option disabled>Choose heading size</option>
+                                            <option selected>Size 1</option>
+                                            <option>Size 2</option>
+                                            <option>Size 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="headingWidgetName" class="col-sm-12 col-form-label">
+                                        Widget Name
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="headingWidgetName"
+                                            placeholder="Widget name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <span class="preview">
+                                    Preview
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <h1>Heading Text</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--widget: list-->
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div class="row heading-widget">
+                            <div class="col-md-5 col-12">
+                                <span class="widget-name">
+                                    List Widget
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-5 text-md-right">
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-up"></i>
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-5">
+                                <select class="form-control">
+                                    <option disabled>Widget Type</option>
+                                    <option>Heading</option>
+                                    <option>Text</option>
+                                    <option selected>List</option>
+                                    <option>Image</option>
+                                    <option>Link</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="form-group row">
+                                    <label for="listText" class="col-sm-12 col-form-label">
+                                        List Item
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control" id="listText"
+                                            placeholder="list item 1&#x0a;list item 2&#x0a;list item 3"
+                                            rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="listType" class="col-sm-12 col-form-label">
+                                        List Type
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <select class="form-control" id="listType">
+                                            <option disabled>Choose list type</option>
+                                            <option selected>Unordered list</option>
+                                            <option>Ordered list</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="listWidgetName" class="col-sm-12 col-form-label">
+                                        Widget Name
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="listWidgetName"
+                                            placeholder="Widget name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <span class="preview">
+                                    Preview
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <ul>
+                                    <li>list item 1</li>
+                                    <li>list item 2</li>
+                                    <li>list item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--widget: text-->
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div class="row heading-widget">
+                            <div class="col-md-5 col-12">
+                                <span class="widget-name">
+                                    Text Widget
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-5 text-md-right">
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-up"></i>
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-5">
+                                <select class="form-control">
+                                    <option disabled>Widget Type</option>
+                                    <option>Heading</option>
+                                    <option selected>Text</option>
+                                    <option>List</option>
+                                    <option>Image</option>
+                                    <option>Link</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="form-group row">
+                                    <label for="Text" class="col-sm-12 col-form-label">
+                                        Text
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control" id="Text" placeholder="Text" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="textWidgetName" class="col-sm-12 col-form-label">
+                                        Widget Name
+                                    </label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="textWidgetName"
+                                            placeholder="Widget name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-3 mb-2">
+                                <span class="preview">
+                                    Preview
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <p>Text</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--widget: image-->
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div class="row heading-widget">
+                            <div class="col-md-5 col-12">
+                                <span class="widget-name">
+                                    Image Widget
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-5 text-md-right">
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-up"></i>
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-5">
+                                <select class="form-control" id="imageWidgetType">
+                                    <option disabled>Widget Type</option>
+                                    <option>Heading</option>
+                                    <option>Text</option>
+                                    <option>List</option>
+                                    <option selected>Image</option>
+                                    <option>Link</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="form-group row">
+                                    <label for="imageUrl" class="col-sm-12 col-form-label">
+                                        Image URL </label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="imageUrl"
+                                            placeholder="google.com/cutecatpics">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="imageWidgetName" class="col-sm-12 col-form-label">
+                                        Widget Name</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="imageWidgetName"
+                                            placeholder="Widget name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-3">
+                                <span class="preview">
+                                    Preview
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <img src="../images/cartoon-cat.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--widget: link-->
+                    <div class="col-md-12 mt-2 mb-2">
+                        <div class="row heading-widget">
+                            <div class="col-md-5 col-12">
+                                <span class="widget-name">
+                                    Link Widget
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-5 text-md-right">
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-up"></i>
+                                </button>
+                                <button class="btn btn-warning">
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-3 col-5">
+                                <select class="form-control">
+                                    <option disabled>Widget Type</option>
+                                    <option>Heading</option>
+                                    <option>Text</option>
+                                    <option>List</option>
+                                    <option>Image</option>
+                                    <option selected>Link</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="form-group row">
+                                    <label for="linkUrl" class="col-sm-12 col-form-label">
+                                        Link URL</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="linkUrl"
+                                            placeholder="https://www.youtube.com/watch?v=BRInpFpbTZ8">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="linkText" class="col-sm-12 col-form-label">
+                                        Link Text</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="linkText" placeholder="Link Text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="linkWidgetName" class="col-sm-12 col-form-label">
+                                        Widget Name</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="linkWidgetName"
+                                            placeholder="Widget name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-3 mb-2">
+                                <span class="preview">
+                                    Preview
+                                </span>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="https://www.youtube.com/watch?v=BRInpFpbTZ8" target="_blank">
+                                    Link Text
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-bottom">
+        <a class="float-right btn btn-success new-widget-btn" href="#">
+            <i class="fas fa-plus"></i>
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
