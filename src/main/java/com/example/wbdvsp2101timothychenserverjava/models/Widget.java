@@ -1,8 +1,19 @@
 package com.example.wbdvsp2101timothychenserverjava.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="widgets")
 public class Widget {
-    private String name;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
     private String type;
     private Integer widgetOrder;
     private String text;
@@ -14,8 +25,17 @@ public class Widget {
     private String style;
     private String value;
     private String topicId;
+    private Boolean ordered;
 
     public Widget() {
+    }
+
+    public Boolean getOrdered() {
+        return ordered;
+    }
+
+    public void setOrdered(Boolean ordered) {
+        this.ordered = ordered;
     }
 
     public Widget(Long id, String topicId, String type, Integer size, String text) {
@@ -145,5 +165,9 @@ public class Widget {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public Widget(Boolean ordered) {
+        this.ordered = ordered;
     }
 }
